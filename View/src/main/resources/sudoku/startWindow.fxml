@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sudoku.StartWindow">
+   <children>
+      <SplitPane prefHeight="228.0" prefWidth="264.0">
+         <items>
+            <AnchorPane prefHeight="80.0" prefWidth="262.0">
+               <children>
+                  <ComboBox fx:id="levelBox" layoutX="45.0" layoutY="40.0" onAction="#level" prefWidth="150.0" promptText="%Level">
+                  <items>
+                     <FXCollections fx:factory="observableArrayList">
+                        <String fx:value="1" />
+                        <String fx:value="2" />
+                        <String fx:value="3" />
+                     </FXCollections>
+                  </items>
+                  </ComboBox>
+                  <Label layoutX="53.0" layoutY="14.0" prefHeight="18.0" prefWidth="150.0" text="%Wybierz_poziom">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </items></SplitPane>
+      <Button fx:id="StartButton" layoutX="300.0" layoutY="62.0" mnemonicParsing="false" onAction="#startGame" prefHeight="219.0" prefWidth="247.0" text="%Start">
+         <font>
+            <Font size="65.0" />
+         </font>
+      </Button>
+      <Button layoutX="395.0" layoutY="351.0" mnemonicParsing="false" onAction="#authors" text="%Autorzy" />
+      <Button fx:id="Load" layoutX="55.0" layoutY="300.0" mnemonicParsing="false" onAction="#load" prefHeight="65.0" prefWidth="165.0" text="%Wczytaj" />
+      <Button layoutX="55.0" layoutY="239.0" mnemonicParsing="false" onAction="#database" prefHeight="42.0" prefWidth="165.0" text="Wczytaj z bazy" />
+   </children>
+</Pane>
